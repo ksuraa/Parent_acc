@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style_progress.css">
+    <title>Progress</title>
+    <script src="./assets/progressbar.js-master/dist/progressbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['bar']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Day', 'Correct answers', 'Incorrect answers'],
+                ['Mon', 0.8, 0.2],
+                ['Tue', 0.5, 0.5],
+                ['Wed', 0.6, 0.4],
+                ['Thu', 0.4, 0.6],
+                ['Fri', 0.4, 0.6],
+                ['Sat', 0.9, 0.1],
+                ['Sun', 0.8, 0.2]
+            ]);
+
+            var options = {
+                backgroundColor: 'none',
+                colors: ['red', '#F7BE11'],
+                fontName: 'Rubik',
+                fontSize: 20,
+                legend: {
+                    textStyle: {
+                        color: 'white',
+                        fontName: 'Rubik',
+                        fontSize: 20,
+                        bold: true,
+                    }
+                },
+                chartArea: {
+                    backgroundColor: 'none',
+                },
+                vAxis: {
+                    format: 'percent',
+                    textStyle: {
+                        color: 'white',
+                        fontName: 'Rubik',
+                        fontSize: 14,
+                        bold: true,
+                    }
+                },
+                hAxis: {
+                    textStyle: {
+                        color: 'white',
+                        fontName: 'Rubik',
+                        fontSize: 14,
+                        bold: true,
+                    }
+                },
+                tooltip: {
+                    textStyle: {
+                        color: 'black',
+                        fontName: 'Rubik',
+                        fontSize: 14,
+                        bold: true,
+                    }
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('columnchart_progress'));
+            var chartMobile = new google.charts.Bar(document.getElementById('columnchart_progress_mobile'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+            chartMobile.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-3 col-xs-3"></div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <p class="header_text">Progress</p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"><a class="exit" href="Parent acc.html"><img
+                            class="exit_img" src="assets/images/exit.png"></a></div>
+            </div>
+        </div>
+        <!--десктоп. версия-->
+        <div class="section d-none d-md-block">
+            <div class="row gx-5">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="mini_game">
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/choosethedifferent.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="Choose The Different.html">
+                                        <p class="mini_game_name">Choose The Different</p>
+                                    </a>
+                                    <p class="mini_game_time time_choose">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_choose">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/spellshooting.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="Spell Shooting.html">
+                                        <p class="mini_game_name">Spell Shooting</p>
+                                    </a>
+                                    <p class="mini_game_time time_spell">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_spell">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/logicallinks.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="Logical Links.html">
+                                        <p class="mini_game_name">Logical Links</p>
+                                    </a>
+                                    <p class="mini_game_time time_logic">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_logic">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/trueorfalse.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="True or False.html">
+                                        <p class="mini_game_name">True or False</p>
+                                    </a>
+                                    <p class="mini_game_time time_true">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_true">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/wordspronunciation.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="Words Pronunciation.html">
+                                        <p class="mini_game_name">Words Pronunciation</p>
+                                    </a>
+                                    <p class="mini_game_time time_words">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_words">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/lineofnumbers.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="Line of Numbers.html">
+                                        <p class="mini_game_name">Line of Numbers</p>
+                                    </a>
+                                    <p class="mini_game_time time_line">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_line">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                        <div class="mini_game_group">
+                            <div class="mini_game_group_left">
+                                <img class="mini_game_img" src="assets/images/combinatoricspuzzle.png">
+                                <div class="mini_game_statistic">
+                                    <a class="mini_game_url" href="Combinatorics Puzzle.html">
+                                        <p class="mini_game_name">Combinatorics Puzzle</p>
+                                    </a>
+                                    <p class="mini_game_time time_combi">Spent Time: 15 minutes</p>
+                                    <p class="mini_game_status status_combi">Status: Passed</p>
+                                </div>
+                            </div>
+                            <div class="mini_game_progress">
+                                <div class='progress'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="timeandgame">
+                        <div class="game_time">
+                            <p class="game_time_name">Game Time</p>
+                            <p class="game_time_time">2 hours 45 minutes</p>
+                        </div>
+                        <div class="favourite_game">
+                            <p class="favourite_game_name">Favourite Game</p>
+                            <p class="favourite_game_game">Logical Links</p>
+                        </div>
+                    </div>
+                    <div class="mini_game_chart">
+                        <p class="progress_name">Progress by day of the week</p>
+                        <div id="columnchart_progress"></div>
+                        <br>
+                    </div>
+                    <div class="recommendation">
+                        <p class="recommendation_name">Recommendations</p>
+                        <p class="recommendation_text">There is no data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--моб. версия-->
+        <div class="section d-md-none d-block">
+            <div class="game_time">
+                <p class="game_time_name">Game Time</p>
+                <p class="game_time_time">1 hour 37 minutes</p>
+            </div>
+            <div class="favourite_game">
+                <p class="favourite_game_name">Favourite Game</p>
+                <p class="favourite_game_game">Logical Links</p>
+            </div>
+            <div class="mini_game">
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/choosethedifferent.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="Choose The Different.html">
+                            <p class="mini_game_name">Choose The Different</p>
+                        </a>
+                        <p class="mini_game_time time_choose">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_choose">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/spellshooting.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="Spell Shooting.html">
+                            <p class="mini_game_name">Spell Shooting</p>
+                        </a>
+                        <p class="mini_game_time time_spell">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_spell">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/logicallinks.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="Logical Links.html">
+                            <p class="mini_game_name">Logical Links</p>
+                        </a>
+                        <p class="mini_game_time time_logic">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_logic">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/trueorfalse.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="True or False.html">
+                            <p class="mini_game_name">True or False</p>
+                        </a>
+                        <p class="mini_game_time time_true">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_true">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/wordspronunciation.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="Words Pronunciation.html">
+                            <p class="mini_game_name">Words Pronunciation</p>
+                        </a>
+                        <p class="mini_game_time time_words">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_words">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/lineofnumbers.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="Line of Numbers.html">
+                            <p class="mini_game_name">Line of Numbers</p>
+                        </a>
+                        <p class="mini_game_time time_line">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_line">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+                <div class="mini_game_group">
+                    <img class="mini_game_img" src="assets/images/combinatoricspuzzle.png">
+                    <div class="mini_game_statistic">
+                        <a class="mini_game_url" href="Combinatorics Puzzle.html">
+                            <p class="mini_game_name">Combinatorics Puzzle</p>
+                        </a>
+                        <p class="mini_game_time time_combi">Spent Time: 15 minutes</p>
+                        <p class="mini_game_status status_combi">Status: Passed</p>
+                    </div>
+                    <div class="mini_game_progress">
+                        <div class='progress'></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mini_game_chart">
+                <p class="progress_name">Progress by day of the week</p>
+                <div id="columnchart_progress_mobile"></div>
+                <br>
+            </div>
+            <div class="recommendation">
+                <p class="recommendation_name">Recommendations</p>
+                <p class="recommendation_text">There is no data</p>
+            </div>
+        </div>
+    </div>
+    <script src='./assets/api/progress.js'></script>
+</body>
+
+</html>

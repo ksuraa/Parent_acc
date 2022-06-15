@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style_minigame.css">
+        <title>Words Pronunciation</title>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {'packages':['line']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Day');
+                data.addColumn('number', 'Correct answers');
+
+                data.addRows([
+                    ['5 days ago',  0.2],
+                    ['4 days ago',  0.5],
+                    ['3 days ago',  0.5],
+                    ['2 days ago',  0.7],
+                    ['Yesterday',  0.8],
+                    ['Today',   0.8]
+                ]);
+
+            var options = {
+                backgroundColor: 'none',
+                colors: ['red'],
+                fontName: 'Rubik',
+                fontSize: 20,
+                legend: {
+                    textStyle: {
+                        color: 'white', 
+                        fontName: 'Rubik',
+                        fontSize: 20,
+                        bold: true,
+                    }
+                },
+                chartArea: {
+                    backgroundColor: 'none',
+                },
+                vAxis: {
+                    format: 'percent',
+                    textStyle: {
+                        color: 'white',
+                        fontName: 'Rubik',
+                        fontSize: 14,
+                        bold: true,
+                    }
+                },
+                hAxis: {
+                    textStyle: {
+                        color: 'white',
+                        fontName: 'Rubik',
+                        fontSize: 14,
+                        bold: true,
+                    }
+                }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('linechart_material'));
+            var chartMobile = new google.charts.Line(document.getElementById('linechart_material_mobile'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+            chartMobile.draw(data, google.charts.Line.convertOptions(options));
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-xs-8"><p class="header_text">Words Pronunciation</p></div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-1 col-xs-1"></div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"><a class="exit" href="Parent acc.html"><img class="exit_img" src="assets/images/exit.png"></a></div>
+                </div>
+            </div>
+            <!--десктоп. версия-->
+            <div class="section d-none d-md-block">
+                <p class="description">
+                    The player is told a word in text form and asked to say it in a voice (voice recognition is used).<br>
+                    The game consists of several rounds of pronunciation of different words. The player is given several attempts to make mistakes during all rounds. 
+                </p>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4"></div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="star_img">
+                            <script>
+                                x = 2;
+                                if (x == 0) {
+                                    document.write("<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: -15%; opacity: 50%'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>")
+                                }
+                                else if (x == 1) {
+                                    document.write("<img src='assets/images/star.png' style='margin-top: 15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: -15%; opacity: 50%'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>")
+                                }
+                                else if (x == 2) {
+                                    document.write("<img src='assets/images/star.png' style='margin-top: 15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/star.png' style='margin-top: -15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>")
+                                }
+                                else if (x == 3) {
+                                    document.write("<img src='assets/images/star.png' style='margin-top: 15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/star.png' style='margin-top: -15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/star.png' style='margin-top: 15%;'>")
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_text">Number of attempts</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4"></div>
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_value attempts">10</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_text">Status</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4"></div>
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_value status">Passed</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_text">Number of hints used</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4"></div>
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_value hints">10</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_text">Spent Time</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4"></div>
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="statistic_value spent">15 minutes</p>
+                    </div>
+                </div>
+                <div class="statistic_chart">
+                    <p class="statistic_chart_name">Progress</p>
+                    <br>
+                    <div id="linechart_material"></div>
+                    <br>
+                </div>
+            </div>
+            <!--моб. версия-->
+            <div class="section d-block d-md-none">
+                <p class="description">
+                    The game consists of several rounds of pronunciation of different words. The player is given several attempts to make mistakes during all rounds. 
+                </p>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="star_img">
+                            <script>
+                                x = 2;
+                                if (x == 0) {
+                                    document.write("<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: -15%; opacity: 50%'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>")
+                                }
+                                else if (x == 1) {
+                                    document.write("<img src='assets/images/star.png' style='margin-top: 15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: -15%; opacity: 50%'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>")
+                                }
+                                else if (x == 2) {
+                                    document.write("<img src='assets/images/star.png' style='margin-top: 15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/star.png' style='margin-top: -15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/nostar.png' style='margin-top: 15%; opacity: 50%'>")
+                                }
+                                else if (x == 3) {
+                                    document.write("<img src='assets/images/star.png' style='margin-top: 15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/star.png' style='margin-top: -15%;'>" + "&nbsp;&nbsp;" + "<img src='assets/images/star.png' style='margin-top: 15%;'>")
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_text">Number of attempts</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_value attempts">10</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_text">Status</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_value status">Passed</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_text">Number of hints used</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_value hints">10</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_text">Spent Time</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p class="statistic_value spent">15 minutes</p>
+                    </div>
+                </div>
+                <div class="statistic_chart">
+                    <p class="statistic_chart_name">Progress</p>
+                    <br>
+                    <div id="linechart_material_mobile"></div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

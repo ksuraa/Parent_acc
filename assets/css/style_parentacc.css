@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Rubik-Bold;
+    src: url("../fonts/rubik/Rubik-Bold.ttf");
+}
+
+@font-face {
+    font-family: Rubik-Regular;
+    src: url("../fonts/rubik/Rubik-Regular.ttf");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: url("../images/bg.jpg");
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header_text {
+    text-align: center;
+    font-family: 'Rubik-Bold';
+    font-size: 24pt;
+    color: #fff;
+}
+
+.text {
+    text-align: center;
+    font-family: 'Rubik-Bold';
+    font-size: 40pt;
+    color: #F7BE11;
+    margin-top: 100px;
+}
+
+.hero {
+    width: 360px;
+    height: 450px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 320px;
+        height: 410px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 240px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .text {
+        text-align: center;
+        font-family: 'Rubik-Bold';
+        font-size: 40pt;
+        color: #F7BE11;
+    }
+
+    .hero {
+        width: 360px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .text {
+        text-align: center;
+        font-family: 'Rubik-Bold';
+        font-size: 40pt;
+        color: #F7BE11;
+    }
+
+    .hero {
+        width: 300px;
+        height: 390px;
+    }
+}
+
+.auth_inner {
+    width: 215px;
+    height: 140px;
+    transform: scale(2);
+    margin-top: 50px;
+    margin-left: 75px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .auth_inner {
+        width: 215px;
+        height: 140px;
+        margin: 50px auto 0 auto;
+        transform: scale(2);
+        overflow: hidden;
+        border: 1px solid transparent;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,543 @@
+@font-face {
+    font-family: Rubik-Bold;
+    src: url("../fonts/rubik/Rubik-Bold.ttf");
+}
+
+@font-face {
+    font-family: Rubik-Regular;
+    src: url("../fonts/rubik/Rubik-Regular.ttf");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: url("../images/bg.jpg");
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header_text {
+    text-align: center;
+    font-family: 'Rubik-Bold';
+    font-size: 24pt;
+    color: #fff;
+}
+
+.exit {
+    float: right;
+    text-decoration: none;
+}
+
+.exit_img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 15px;
+}
+
+.mini_game {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 570px;
+    border: 5px solid #F7BE11;
+    border-radius: 30px;
+}
+
+.mini_game_group {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.mini_game_group_left {
+    display: flex;
+}
+
+.mini_game_img {
+    margin-left: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.mini_game_statistic {
+    margin-left: 10px;
+    text-align: left;
+}
+
+.mini_game_url {
+    color: #F7BE11;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.mini_game_url:hover {
+    color: #fff;
+}
+
+.mini_game_name {
+    font-family: 'Rubik-Bold';
+    font-size: 20pt;
+}
+
+.mini_game_time {
+    margin-top: -25px;
+    font-family: 'Rubik-Regular';
+    font-size: 16pt;
+    color: #fff;
+}
+
+.mini_game_status {
+    margin-top: -20px;
+    font-family: 'Rubik-Regular';
+    font-size: 16pt;
+    color: #fff;
+}
+
+.timeandgame {
+    display: flex;
+}
+
+.game_time {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 277px;
+    border: 5px solid #F7BE11;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.game_time_name {
+    font-family: 'Rubik-Bold';
+    font-size: 20pt;
+    color: #fff;
+}
+
+.game_time_time {
+    font-family: 'Rubik-Bold';
+    font-size: 20pt;
+    color: #F7BE11;
+}
+
+.favourite_game {
+    margin-left: 292px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 277px;
+    border: 5px solid #F7BE11;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.favourite_game_name {
+    font-family: 'Rubik-Bold';
+    font-size: 20pt;
+    color: #fff;
+}
+
+.favourite_game_game {
+    font-family: 'Rubik-Bold';
+    font-size: 18pt;
+    color: #F7BE11;
+}
+
+.mini_game_chart {
+    margin-top: 130px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 570px;
+    border: 5px solid #F7BE11;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.progress_name {
+    font-family: 'Rubik-Bold';
+    font-size: 20pt;
+    color: #fff;
+}
+
+#columnchart_progress {
+    width: 550px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recommendation {
+    margin-top: 630px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 570px;
+    border: 5px solid #F7BE11;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.recommendation_name {
+    font-family: 'Rubik-Bold';
+    font-size: 20pt;
+    color: #fff;
+}
+
+.recommendation_text {
+    font-family: 'Rubik-Regular';
+    font-size: 16pt;
+    color: #fff;
+    text-align: left;
+    padding-left: 15px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Container */
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .mini_game {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 480px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+    }
+
+    .game_time {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 230px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .favourite_game {
+        margin-left: 242px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        max-width: 230px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .mini_game_chart {
+        margin-top: 180px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 480px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    #columnchart_progress {
+        width: 450px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recommendation {
+        margin-top: 590px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 480px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    /* Container */
+    .container {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .game_time {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 720px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .favourite_game {
+        margin-top: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 720px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .mini_game {
+        margin-top: 280px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 720px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+    }
+
+    .mini_game_chart {
+        margin-top: 1165px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 720px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    #columnchart_progress_mobile {
+        width: 650px;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recommendation {
+        margin-top: 1680px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 720px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+
+    /* Container */
+    .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .exit_img {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 15px;
+    }
+
+    .game_time {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .favourite_game {
+        margin-top: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .mini_game {
+        margin-top: 280px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+    }
+
+    .mini_game_img {
+        margin-left: 10px;
+        width: 51px;
+        height: 51px;
+    }
+
+    .mini_game_chart {
+        margin-top: 1510px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    #columnchart_progress_mobile {
+        width: 390px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recommendation {
+        margin-top: 1920px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+
+    /* Container */
+    .container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .exit_img {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 15px;
+    }
+
+    .game_time {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 350px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .favourite_game {
+        margin-top: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 350px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .mini_game {
+        margin-top: 280px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 350px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+    }
+
+    .mini_game_img {
+        margin-left: 10px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .mini_game_name {
+        font-family: 'Rubik-Bold';
+        font-size: 16pt;
+    }
+    
+    .mini_game_time {
+        margin-top: -25px;
+        font-family: 'Rubik-Regular';
+        font-size: 14pt;
+        color: #fff;
+    }
+    
+    .mini_game_status {
+        margin-top: -20px;
+        font-family: 'Rubik-Regular';
+        font-size: 14pt;
+        color: #fff;
+    }
+
+    .mini_game_chart {
+        margin-top: 1350px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 350px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    #columnchart_progress_mobile {
+        width: 340px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recommendation {
+        margin-top: 1750px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 350px;
+        border: 5px solid #F7BE11;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+
+
+/*Progress bar styles*/
+
+.progress {
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background-color: #3d2091;
+}

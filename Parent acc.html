@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style_parentacc.css">
+    <title>Parent acc</title>
+
+    <script src="https://login-sdk.xsolla.com/latest/"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- десктоп. версия -->
+        <div class="section d-none d-md-block">
+            <div class="header">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4"></div>
+                    <div class="col-xl-4 col-lg-4">
+                        <p class="header_text">Parent account</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4"></div>
+                <div class="col-xl-4 col-lg-4">
+                    <p class="text">Continue with</p>
+                </div>
+                <div class="col-xl-4 col-lg-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-4">
+                    <img class="hero" src="assets/images/hero.png">
+                </div>
+                <div id="xl_auth_mobile" class='auth_inner'></div>
+                <div class="col-xl-4 col-lg-4 col-md-4"></div>
+            </div>
+        </div>
+        <!-- моб. версия -->
+        <div class="section d-md-none d-block">
+            <div class="header">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                        <p class="header_text">Parent account</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                </div>
+            </div>
+            <p class="text">Continue with</p>
+            <div id="xl_auth" class='auth_inner'></div>
+            <img class="hero" src="assets/images/hero.png">
+        </div>
+    </div>
+    <script>
+        const xl = new XsollaLogin.Widget({
+            projectId: '923b71c2-19fd-11ec-bc85-42010aa80004',
+            preferredLocale: 'en_US',
+        });
+    </script>
+    <script type="text/javascript">
+        xl.mount('xl_auth');
+        xl.mount('xl_auth_mobile')
+    </script>
+</body>
+
+</html>
