@@ -1,5 +1,5 @@
 //api logic
-axios.get(`http://ancient-reef-27707.herokuapp.com/api/taskStatistic`) //Выполняем гет запрос на адрес предполагаемого сервера
+axios.get(`https://ancient-reef-27707.herokuapp.com/api/taskStatistic`) //Выполняем гет запрос на адрес предполагаемого сервера
     .then(function (response) { //Ответ сервера при удачном выполнении запроса
         const data = response.data; //Заносим полученные данные в массив data
         const spellShooting = data.filter(task => task.taskCategory === 'spellShooting' && task.taskAge === 'age_5_6'); //Фильтруем массив data по необходимым для игры параметрам
