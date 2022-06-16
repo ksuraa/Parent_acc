@@ -42,6 +42,9 @@ axios.get(`https://ancient-reef-27707.herokuapp.com/api/taskStatistic`) //Вып
             case 25: //При кейсе 25 делаем изображение с тремя звездами
                 image.src = 'assets/images/star3.png';
                 break;
+
+            default: image.src = 'assets/images/star3.png';
+                break;
         }
 
         //Изображение для десктоп и мобильной версии сайта
