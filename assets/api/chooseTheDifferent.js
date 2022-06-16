@@ -9,80 +9,36 @@ axios.get(`https://ancient-reef-27707.herokuapp.com/api/taskStatistic`) //Вып
         const x = chooseTheDifferent[0].taskReward //Получаем с бэкенда данные по успеваемости клиента, они могут быть 0, 5, 15, 25
         switch (x) {
             case 0: //При кейсе 0 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 1: //При кейсе 1 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 2: //При кейсе 2 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 3: //При кейсе 3 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 4: //При кейсе 4 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 5: //При кейсе 5 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 6: //При кейсе 6 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 7: //При кейсе 7 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 8: //При кейсе 8 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
-                break;
             case 9: //При кейсе 9 делаем изображение с нулем звезд
                 image.src = 'assets/images/star0.png';
                 break;
             case 10: //При кейсе 10 делаем изображение с одной звездой
-                image.src = 'assets/images/star1.png';
-                break;
             case 11: //При кейсе 11 делаем изображение с одной звездой
-                image.src = 'assets/images/star1.png';
-                break;
             case 12: //При кейсе 12 делаем изображение с одной звездой
-                image.src = 'assets/images/star1.png';
-                break;
             case 13: //При кейсе 13 делаем изображение с одной звездой
-                image.src = 'assets/images/star1.png';
-                break;
             case 14: //При кейсе 14 делаем изображение с одной звездой
                 image.src = 'assets/images/star1.png';
                 break;
             case 15: //При кейсе 15 делаем изображение с двумя звездами
-                image.src = 'assets/images/star2.png';
-                break;
             case 16: //При кейсе 16 делаем изображение с двумя звездами
-                image.src = 'assets/images/star2.png';
-                break;
             case 17: //При кейсе 17 делаем изображение с двумя звездами
-                image.src = 'assets/images/star2.png';
-                break;
             case 18: //При кейсе 18 делаем изображение с двумя звездами
-                image.src = 'assets/images/star2.png';
-                break;
             case 19: //При кейсе 19 делаем изображение с двумя звездами
-                image.src = 'assets/images/star2.png';
-                break;
             case 20: //При кейсе 20 делаем изображение с тремя звездами
-                image.src = 'assets/images/star3.png';
+                image.src = 'assets/images/star2.png';
                 break;
             case 21: //При кейсе 21 делаем изображение с тремя звездами
-                image.src = 'assets/images/star3.png';
-                break;
             case 22: //При кейсе 22 делаем изображение с тремя звездами
-                image.src = 'assets/images/star3.png';
-                break;
             case 23: //При кейсе 23 делаем изображение с тремя звездами
-                image.src = 'assets/images/star3.png';
-                break;
             case 24: //При кейсе 24 делаем изображение с тремя звездами
-                image.src = 'assets/images/star3.png';
-                break;
             case 25: //При кейсе 25 делаем изображение с тремя звездами
                 image.src = 'assets/images/star3.png';
                 break;
