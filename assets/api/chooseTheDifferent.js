@@ -18,14 +18,14 @@ axios.get(`https://ancient-reef-27707.herokuapp.com/api/taskStatistic`) //Вып
             case 7: //При кейсе 7 делаем изображение с нулем звезд
             case 8: //При кейсе 8 делаем изображение с нулем звезд
             case 9: //При кейсе 9 делаем изображение с нулем звезд
-                image.src = 'assets/images/star0.png';
+                image.src = 'assets/images/Star0.png';
                 break;
             case 10: //При кейсе 10 делаем изображение с одной звездой
             case 11: //При кейсе 11 делаем изображение с одной звездой
             case 12: //При кейсе 12 делаем изображение с одной звездой
             case 13: //При кейсе 13 делаем изображение с одной звездой
             case 14: //При кейсе 14 делаем изображение с одной звездой
-                image.src = 'assets/images/star1.png';
+                image.src = 'assets/images/Star1.png';
                 break;
             case 15: //При кейсе 15 делаем изображение с двумя звездами
             case 16: //При кейсе 16 делаем изображение с двумя звездами
@@ -33,17 +33,17 @@ axios.get(`https://ancient-reef-27707.herokuapp.com/api/taskStatistic`) //Вып
             case 18: //При кейсе 18 делаем изображение с двумя звездами
             case 19: //При кейсе 19 делаем изображение с двумя звездами
             case 20: //При кейсе 20 делаем изображение с тремя звездами
-                image.src = 'assets/images/star2.png';
+                image.src = 'assets/images/Star2.png';
                 break;
             case 21: //При кейсе 21 делаем изображение с тремя звездами
             case 22: //При кейсе 22 делаем изображение с тремя звездами
             case 23: //При кейсе 23 делаем изображение с тремя звездами
             case 24: //При кейсе 24 делаем изображение с тремя звездами
             case 25: //При кейсе 25 делаем изображение с тремя звездами
-                image.src = 'assets/images/star3.png';
+                image.src = 'assets/images/Star3.png';
                 break;
 
-            default: image.src = 'assets/images/star3.png';
+            default: image.src = 'assets/images/Star3.png';
                 break;
         }
 
