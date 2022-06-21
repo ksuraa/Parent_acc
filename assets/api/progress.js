@@ -104,6 +104,8 @@ const statusArray = Array.from(statusX)
 const time = 'Status: Passed'
 statusArray.forEach(item => item.innerHTML = time);
 
+
+
 // progress bars logic
 //Выполняем логику для отображения прогресс баров с помощью библиотеки PROGRESS
 const progress = document.querySelectorAll('.progress')

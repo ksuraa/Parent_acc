@@ -152,7 +152,7 @@ body {
 }
 
 .mini_game_chart {
-    margin-top: 130px;
+    margin-top: 170px;
     box-sizing: border-box;
     position: absolute;
     width: 100%;
@@ -170,17 +170,17 @@ body {
 
 #columnchart_progress {
     width: 550px;
-    height: 400px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .recommendation {
-    margin-top: 630px;
+    margin-top: 880px;
     box-sizing: border-box;
     position: absolute;
     width: 100%;
-    max-width: 570px;
+    max-width: 1140px;
     border: 5px solid #F7BE11;
     border-radius: 30px;
     text-align: center;
@@ -241,7 +241,7 @@ body {
     }
 
     .mini_game_chart {
-        margin-top: 180px;
+        margin-top: 220px;
         box-sizing: border-box;
         position: absolute;
         width: 100%;
@@ -253,17 +253,17 @@ body {
 
     #columnchart_progress {
         width: 450px;
-        height: 300px;
+        height: 500px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .recommendation {
-        margin-top: 590px;
+        margin-top: 920px;
         box-sizing: border-box;
         position: absolute;
         width: 100%;
-        max-width: 480px;
+        max-width: 960px;
         border: 5px solid #F7BE11;
         border-radius: 30px;
         text-align: center;
@@ -331,7 +331,7 @@ body {
     }
 
     .recommendation {
-        margin-top: 1680px;
+        margin-top: 1880px;
         box-sizing: border-box;
         position: absolute;
         width: 100%;
